@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
     end
 
     def add 
-        product=Product.create(title:params[:title],price:params[:price],category:params[:category],quantity:params[:quantity],description:params[:description])
+        product=Product.create(title:params[:title],price:params[:price],category:params[:category],quantity:params[:quantity],description:params[:description],image:params[:image])
         render json: product
     end
 
