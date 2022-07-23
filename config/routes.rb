@@ -6,11 +6,14 @@ Rails.application.routes.draw do
   delete "/product/:id", to: "products#delete_one"
   post "/product", to: "products#add"
   put "/product/:id",to: "products#edit"
-  get "signup", to: "users#new"
-get "login", to: "sessions#new"
-post "login", to: "sessions#create"
-delete "logout", to: "sessions#destroy"
-resources :users, except: [:new]
+  get "/signup",  to:"users#index"
+  get "/signup/new", to: "users#new"
+  post "/signup", to: "users#create"
+get "/login/new", to: "sessions#new"
+get "/login",  to:"sessions#index"
+post "/login", to: "sessions#create"
+delete "/logout", to: "sessions#destroy"
+# resources :users, except: [:new]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
