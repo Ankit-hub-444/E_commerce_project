@@ -32,6 +32,7 @@ class ProductsController < ApplicationController
         product.category=params[:category]
         product.quantity=params[:quantity]
         product.description=params[:description]
+        product.image=params[:image]
         product.save 
         render json: product
     end
